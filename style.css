@@ -1,0 +1,321 @@
+body{
+    margin: 0;
+    background-color: var(--darkGray);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root{
+    --green:#4EE1AD;
+    --black:#151515;
+    --gray:#D9D9D9;
+    --white:#ffffff;
+    --darkGray:#242424;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+.HeadApp{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+.Underline{
+    border-bottom: 3px solid var(--green);
+}
+
+.container{
+    position: relative;
+    width: 80%;
+    border: var(--green) 1px solid;
+    border-radius: 10px;
+    margin:  0 auto;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.employee{
+    position: relative;
+    background-color: #525252;
+    border-radius: 10px;
+    border: 1px solid var(--green);
+    width: 500px;
+    height: 400px;
+    padding: 10px 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-width: 100%;
+}
+
+
+.employee::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.employee::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+    border-radius: 10px;
+}
+.WrapEmployee{
+    height: 400px;
+    margin: 50px 0;
+    max-width: 45%;
+}
+.task{
+    position: relative;
+    background-color: #525252;
+    border-radius: 10px;
+    border: 1px solid var(--green);
+    width: 500px;
+    max-width: 100%;
+    height: 400px;
+    padding: 10px 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.task::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+    border-radius: 10px;
+}
+.task::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.WrapTask{
+    height: 400px;
+    margin: 50px 0;
+    max-width: 45%;
+}
+.wrapHead{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 7px;
+}
+.Head{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+.btnHEad{
+    color: var(--gray);
+    background-color: var(--darkGray);
+    border: 1px solid var(--gray);
+    font-size: 1rem;
+    height: 30px;
+    padding: 0 5px;
+    outline: transparent;
+    margin-top: auto;
+    
+    border-radius: 10px;
+    transition: transform 200ms ease-in-out;
+}
+.btnHEad:hover,.btnHEad:focus{
+    border-color: var(--green);
+    color: var(--green);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.EmpoyeeRow{
+    position: relative;
+    margin-left: 20px;
+    height: 100px;
+    width: 90%;
+    background-color: var(--darkGray);
+    color: white;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+.ToShowInfo{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid gray;
+    
+}
+.emName{
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.emEmail{
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 0;
+    font-size: 17px;
+}
+
+.btn{
+    border-radius: 10px;
+    outline: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 5px;
+    background-color: #747474;
+    color: white;
+
+}
+
+.btn:hover,.btn:focus{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.btnup:hover,.btnup:focus{
+    color: var(--green);
+    
+}
+.btndl:hover,.btndl:focus{
+    color: rgb(255, 100, 100);
+}
+.ButtonEmDiv{
+   margin-top: auto;
+   display: flex;
+   width: 100%;
+   gap: 20px;
+}
+
+
+.EmpoyeeRow+.EmpoyeeRow{
+    margin-top: 10px;
+}
+
+.TaskRow{
+    position: relative;
+    margin-left: 20px;
+    height: 100px;
+    width: 90%;
+    background-color: var(--darkGray);
+    color: white;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.TaskInfo{
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid gray;
+}
+.EmpID{
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+.TaskID{
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+.tTitle{
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.tAsignee{
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 0;
+    font-size: 17px;
+}
+.TaskRow+.TaskRow{
+    margin-top: 10px;
+}
+#OverLay{
+    background-color: #52525285;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition:  300ms ease-in-out;
+}
+#OverLay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border: 1px solid black;
+    z-index: 5;
+    background-color: var(--darkGray);
+    color: var(--gray);
+    width: 800px;
+    transition: 300ms ease-in-out;
+    padding: 20px;
+}
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+.StatusOfTask{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 13px;
+}
+.hiden{
+    display: none;
+}
+.StatisctBTN{
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    bottom: 10px;
+    right: 10px;
+    color: var(--gray);
+    font-size: 1rem;
+    transition: 200ms ease-in ;
+}
+.StatisctBTN:hover,.StatisctBTN:focus{
+    cursor: pointer;
+    color: var(--green);
+    transform: scale(1.2);
+}
+.pieChartBTN{
+    bottom: 10px;
+    left: 10px;
+    right: auto;
+}
+.clearData{
+    bottom: 10px;
+    left: 50%;
+    right: auto;
+    
+}
+
+@media only screen and (max-width: 800px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .WrapEmployee{
+        max-width: 90%;
+    }
+    .WrapTask{
+        max-width: 90%;
+    }
+}
+
+

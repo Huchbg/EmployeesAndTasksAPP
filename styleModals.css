@@ -1,0 +1,226 @@
+:root{
+    --green:#4EE1AD;
+    --black:#151515;
+    --gray:#D9D9D9;
+    --white:#ffffff;
+    --darkGray:#242424;
+}
+
+.ContainEmpInf{
+    display: flex;
+    justify-content: space-between;
+}
+.ReadEmModel{
+    width: 1000px;
+}
+.CloseModal{
+    font-size: 1.7rem;
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    top: 20px;
+    background: transparent;
+    outline: transparent;
+    border: none;
+    color: white;
+    transition: 100ms ease-in-out;
+}
+.CloseModal:hover,.CloseModal:focus{
+    cursor: pointer;
+    transform: scale(1.5);
+    color: rgb(254, 55, 55);
+}
+.Modal-emName{
+    margin: 0;
+    font-size: 30px;
+}
+.PersonalEmployeeInf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+.mode-employ-container{
+    transform: translateX(+10px);
+    font-size: 1.75rem;
+    
+}
+.mode-employ-Heads{
+    border-bottom: 3px solid var(--green) ;
+}
+.mode-employ-container+.mode-employ-container{
+    margin-top: 50px;
+}
+
+.mode-employ-comon{
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+}
+.AddEmModel{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.label{
+    margin: 0;
+    margin-bottom: 5px;
+    position: relative;
+    left: -10px;
+    font-size: 20px;
+}
+.ContainingImputs{
+    margin-bottom: 1.75rem;
+    
+}
+.textInputEmAdd{
+    color: white;
+    background-color: var(--darkGray);
+    border: transparent;
+    outline: transparent;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--gray);
+    width: 100%;
+    
+}
+.AddEmployeeHead{
+   font-size: 2rem;
+}
+.containingDate{
+    margin-top: 50px;
+    margin-right: auto
+}
+.labelDate{
+    font-size: 1.5rem;
+}
+
+.ButoonAndDateEmadd{
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.feedbackEmAdd{
+    background-color: var(--green);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.AddEmButton{
+    width: 120px;
+    
+    margin-top: 50px;
+
+}
+
+.spanIDUpdateEmployee{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.modalReadTAsk{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.ReadTaskHead{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 30px;
+}
+.ReadTaskTitle{
+    margin-top: 50px;
+}
+.ReadTaskDescribeLabel{
+    margin: 0;
+    font-size: 20px;
+}
+.ReadTAskStatus{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.employeRead{
+    width: 400px;
+}
+
+.ReadTAskDate{
+    display: flex;
+    gap: 20px;
+}
+
+.modalAddTask{
+    display: flex;
+    justify-content: space-around;
+}
+#AddTaskTextArea{
+    background-color: var(--darkGray);
+    color: white;
+    border: 1px solid var(--green);
+}
+.CheckboxAndLabel{
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+}
+#checkboxID{
+    display: block;
+    margin-right: 15px;
+}
+.modalAsk{
+    width: 300px;
+    padding-top: 50px;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 100, 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.HaadAskModal{
+    color: rgb(255, 100, 100);
+    
+    width: 100%;
+}
+
+.Statistics{
+    width: 80%;
+}
+.RowStatistic{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+.HeadOfStatRow{
+    width: 20%;
+}
+.bardiv{
+    position: relative;
+    width: 60%;
+    height: 20px;
+}
+.Bar{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--green);
+}
+.HeadOfStatRowNum{
+    padding-left: 10px;
+}
+.PieChart{
+    width: 400px;
+}
+#pie-char{
+    display: block;
+    margin: 0 auto;
+    
+}

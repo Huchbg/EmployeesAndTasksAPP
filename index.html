@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleModals.css" />
+    <script src="scriptMain.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>EmployeesAndTasks</title>
+  </head>
+  <body>
+    <div id="OverLay" class=""></div>
+
+    <!-- modal Employ Read -->
+    <div class="modal ReadEmModel" data-ReadEmModal>
+      <h2 class="Modal-emName" data-ReadEmName>Gosho Petrov</h2>
+      <button class="CloseModal">&times;</button>
+      <div class="ContainEmpInf">
+        <div class="PersonalEmployeeInf">
+          <div class="mode-employ-container">
+            <span class="mode-employ-Heads">Phone Number</span> :
+            <span class="mode-employ-phone mode-employ-comon" data-ReadEmPhone>
+              0000000000</span
+            >
+          </div>
+          <div class="mode-employ-container">
+            <span class="mode-employ-Heads">Email</span> :
+            <span class="mode-employ-email mode-employ-comon" data-ReadEmEmail>
+              example@gmail.com</span
+            >
+          </div>
+          <div class="mode-employ-container">
+            <span class="mode-employ-Heads">Date Of Birth</span> :
+            <span
+              class="mode-employ-birthDate mode-employ-comon"
+              data-ReadEmBithDate
+            >
+              jan 10 1999</span
+            >
+          </div>
+          <div class="mode-employ-container">
+            <span class="mode-employ-Heads">Monthly Salary</span> :
+            <span
+              class="mode-employ-salary mode-employ-comon"
+              data-ReadEmSalary
+            >
+              10000$</span
+            >
+          </div>
+        </div>
+        <div class="ModalEmpTask">
+          <h2 class="Head">Tasks</h2>
+
+          <div class="EmployeesTasks task" data-ReadEmTaskContainer>
+            <div class="TaskRow module-TaskRow-employ">
+              <div class="TaskInfo">
+                <p class="tTitle">Floor Sweeping</p>
+                <p class="tAsignee">Gosho Petrov</p>
+              </div>
+              <div class="ButtonEmDiv"></div>
+              <span class="StatusOfTask">finished</span>
+              <span class="TaskID">ID700</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--modal add employee -->
+    <div class="modal AddEmModel" data-ModalAddEm>
+      <button class="CloseModal">&times;</button>
+      <div class="InputTextAddEm">
+        <h2 class="AddEmployeeHead" data-HeadModalNewEmployee>
+          Add New Employee
+        </h2>
+        <div class="ContainingImputs">
+          <p class="label">FirstName:</p>
+          <input type="text" data-AddEmFirstName class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">LastName:</p>
+          <input type="text" data-AddEmLastName class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">Email:</p>
+          <input type="email" data-AddEmEmail class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">PhoneNumber:</p>
+          <input type="tel" data-AddEmPhone class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">Salary:</p>
+          <input type="text" data-AddEmSalary class="textInputEmAdd" />
+        </div>
+      </div>
+      <div class="ButoonAndDateEmadd">
+        <div class="ContainingImputs containingDate">
+          <p class="label labelDate">Date Of Birth:</p>
+          <input type="date" data-AddEmBithDate />
+        </div>
+        <p class="feedbackEmAdd" data-AddEmFeedback>
+          Enter all fields and click the button to add a new employee
+        </p>
+        <button class="AddEmButton btnHEad" data-AddEmButton>Add</button>
+      </div>
+    </div>
+    <!--Update Employee Modal-->
+    <div class="modal AddEmModel" data-UpdateEmployeeModal data-Target="0">
+      <button class="CloseModal">&times;</button>
+      <span class="spanIDUpdateEmployee" data-UpdateEmployeeID>ID39</span>
+      <div class="InputTextAddEm">
+        <h2 class="AddEmployeeHead" data-HeadModalNewEmployee>
+          Update Employee
+        </h2>
+        <div class="ContainingImputs">
+          <p class="label">FirstName:</p>
+          <input type="text" data-UpdateEmFirstName class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">LastName:</p>
+          <input type="text" data-UpdateEmLastName class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">Email:</p>
+          <input type="text" data-UpdateEmEmail class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">PhoneNumber:</p>
+          <input type="text" data-UpdateEmPhone class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">Salary:</p>
+          <input type="text" data-UpdateEmSalary class="textInputEmAdd" />
+        </div>
+      </div>
+      <div class="ButoonAndDateEmadd">
+        <div class="ContainingImputs containingDate">
+          <p class="label labelDate">Date Of Birth:</p>
+          <input type="date" data-UpdateEmBithDate />
+        </div>
+        <p class="feedbackEmAdd" data-UpdateEmFeedback>
+          Change the data in the fields to update the information about this
+          employee
+        </p>
+        <button class="AddEmButton btnHEad" data-UpdateEmButton>Update</button>
+      </div>
+    </div>
+    <!--Modal Read Task-->
+    <div class="modal modalReadTAsk" data-ReadTaskModal>
+      <button class="CloseModal">&times;</button>
+      <span class="ReadTAskStatus" data-ReadTaskStatus>finished</span>
+      <div class="infoReadTAsk">
+        <p class="ReadTaskHead">Task</p>
+        <h3 class="ReadTaskTitle" data-ReadTaskTitle>FloorSwiping</h3>
+        <p class="ReadTaskDescribeLabel">Descriptin:</p>
+        <p class="ReadTaskDescription" data-ReadTaskDescription>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At mollitia
+          nihil, eum velit labore eligendi iure ex porro perferendis similique
+          vel suscipit. Quia dolore expedita dolor ex doloribus rerum
+          voluptatibus!
+        </p>
+        <div class="ReadTAskDate">
+          <p class="ReadTaskDAteLAbe">Due date:</p>
+          <p class="ReadTaskDateP" data-ReadTaskDuedate>20 jan 2020</p>
+        </div>
+      </div>
+      <div class="ReadTaskEmployEmContainer1" data-ReadTaskContainer>
+        <div class="employee employeRead">
+          <div class="EmpoyeeRow">
+            <div class="ToShowInfo">
+              <p class="emName" data-emName></p>
+              <p class="emEmail" data-emEmail></p>
+            </div>
+            <div class="ButtonEmDiv"></div>
+            <span class="EmpID" data-emID>ID4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Add Task-->
+    <div class="modal modalAddTask" data-AddTaskModal>
+      <button class="CloseModal">&times;</button>
+      <div class="InputTextAddTask">
+        <h2 class="AddTaskHead">Add New Task</h2>
+        <div class="ContainingImputs">
+          <p class="label">Title:</p>
+          <input type="text" data-AddTaskInputTitle class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">EmployeeID:</p>
+          <input type="text" data-AddTaskInputEmployee class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">Descriptin:</p>
+          <textarea
+            id="AddTaskTextArea"
+            cols="30"
+            rows="10"
+            data-AddTaskTextAread
+          ></textarea>
+        </div>
+      </div>
+      <div class="ButoonAndDateEmadd">
+        <div class="ContainingImputs containingDate">
+          <p class="label labelDate">Due Date:</p>
+          <input type="date" data-AddTaskDueDate />
+        </div>
+        <p class="feedbackEmAdd" data-AddTaskFeedBack>
+          Enter all fields and click the button to add a Task
+        </p>
+        <button class="AddEmButton btnHEad" data-AddTaskButton>Add</button>
+      </div>
+    </div>
+    <!--Modal Update Task-->
+    <div class="modal modalAddTask" data-UpdateTaskModal data-Target="0">
+      <button class="CloseModal">&times;</button>
+      <span class="spanIDUpdateEmployee" data-UpdateTaskID>ID39</span>
+      <div class="InputTextAddTask">
+        <h2 class="AddTaskHead">Update Task</h2>
+        <div class="ContainingImputs">
+          <p class="label">Title:</p>
+          <input type="text" data-UpdateTaskInputTitle class="textInputEmAdd" />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">EmployeeID:</p>
+          <input
+            type="text"
+            data-UpdateTaskInputEmployee
+            class="textInputEmAdd"
+          />
+        </div>
+        <div class="ContainingImputs">
+          <p class="label">Descriptin:</p>
+          <textarea
+            id="AddTaskTextArea"
+            cols="30"
+            rows="10"
+            data-UpdateTaskTextAread
+          ></textarea>
+        </div>
+      </div>
+      <div class="ButoonAndDateEmadd">
+        <div class="ContainingImputs containingDate">
+          <p class="label labelDate">Due Date:</p>
+          <input type="date" data-UpdateTaskDueDate />
+        </div>
+        <div class="CheckboxAndLabel">
+          <input type="checkbox" id="checkboxID" data-checkboxUpdate />
+          <p class="label">Is finished</p>
+        </div>
+        <p class="feedbackEmAdd" data-UpdateTaskFeedBack>
+          Change any of the fields and then click Update to update the Task
+        </p>
+        <button class="AddEmButton btnHEad" data-UpdateTaskButton>
+          Update
+        </button>
+      </div>
+    </div>
+    <!--Modal ask before delete-->
+    <div
+      class="modal modalAsk"
+      data-DeleteModal
+      data-TypeTarget=""
+      data-Target="0"
+    >
+      <button class="CloseModal">&times;</button>
+      <p class="HaadAskModal" data-HeadDeleteModal>
+        Are you sure you want to delete employee with ID
+      </p>
+      <button class="AddEmButton btnHEad" data-DeleteTargetedModalButton>
+        Yes
+      </button>
+    </div>
+    <!--modal Statistics-->
+    <div class="modal Statistics" data-ModalStatistics>
+      <button class="CloseModal">&times;</button>
+      <h1 class="HEadOfTatistic">
+        Top 5 employees with the most tasks finished
+      </h1>
+      <div class="statisticContainer" data-ContainerStatistics>
+        <div class="RowStatistic" data-MainRow>
+          <h2 class="HeadOfStatRow" data-nameStat>All Tasks</h2>
+          <div class="bardiv"><span class="Bar" data-BarStat></span></div>
+          <h2 class="HeadOfStatRow HeadOfStatRowNum" data-StatNum>10</h2>
+        </div>
+      </div>
+    </div>
+    <!--Modal Pie Chart-->
+    <div class="modal PieChart" data-ModalPieChart>
+      <button class="CloseModal">&times;</button>
+      <h1>Pie Chart of tasks</h1>
+      <h3>green-finished tasks</h3>
+      <h3>blue-working tasks</h3>
+      <h3>red-due tasks</h3>
+      <div class="PieCharDiv">
+        <canvas id="pie-char"></canvas>
+      </div>
+      <div id="message"></div>
+    </div>
+    <!-- body  -->
+    <h1 class="HeadApp">
+      <span class="Underline">Employees</span> And
+      <span class="Underline">Tasks</span>
+      Management App
+    </h1>
+    <div class="container">
+      <div class="WrapEmployee">
+        <div class="wrapHead">
+          <h1 class="Head">Employees</h1>
+          <button class="btnHEad" data-AddEmMainBTN>AddEmployee</button>
+        </div>
+        <!--employe-->
+        <div class="employee" data-MainEmployeeContainer></div>
+        <!--employe-->
+      </div>
+      <div class="WrapTask">
+        <div class="wrapHead">
+          <h1 class="Head">Tasks</h1>
+          <button class="btnHEad" data-AddTaskMainBTN>AddTask</button>
+        </div>
+        <!--Task-->
+        <div class="task" data-MainTaskContainer></div>
+        <!--Task-->
+      </div>
+      <button class="StatisctBTN pieChartBTN" data-BtnStatisticsPie>
+        Pie Chart
+      </button>
+      <button class="StatisctBTN" data-BtnStatistics>Display Statistics</button>
+      <button
+        class="StatisctBTN clearData"
+        style="transform: translateX(-50%)"
+        data-clearData
+      >
+        Clear ALL data
+      </button>
+    </div>
+  </body>
+  <!--Inside is row of employee-->
+  <template data-RowEmployee>
+    <div class="EmpoyeeRow">
+      <div class="ToShowInfo">
+        <p class="emName" data-emName></p>
+        <p class="emEmail" data-emEmail></p>
+      </div>
+      <div class="ButtonEmDiv">
+        <button class="btn" data-emReadBTN>Read</button>
+        <button class="btn btnup" data-emUpdateBTN>Update</button>
+        <button class="btn btndl" data-emDeleteBTN>Delete</button>
+      </div>
+      <span class="EmpID" data-emID>ID4</span>
+    </div>
+  </template>
+  <!--Inside is row of task-->
+  <template data-RowTask>
+    <div class="TaskRow">
+      <div class="TaskInfo">
+        <p class="tTitle" data-taskTitle>Floor Sweeping</p>
+        <p class="tAsignee" data-taskAsignee>Gosho Petrov</p>
+      </div>
+      <div class="ButtonEmDiv">
+        <button class="btn" data-taskReadBTN>Read</button>
+        <button class="btn btnup" data-taskUpdateBTN>Update</button>
+        <button class="btn btndl" data-taskDeleteBTN>Delete</button>
+        <span class="StatusOfTask" data-taskStatus>finished</span>
+      </div>
+      <span class="TaskID" data-taskID>ID700</span>
+    </div>
+  </template>
+  <!--Inside is row of employee for read task-->
+  <template data-RowEmployeeReadTask>
+    <div class="employee employeRead">
+      <div class="EmpoyeeRow">
+        <div class="ToShowInfo">
+          <p class="emName" data-emName></p>
+          <p class="emEmail" data-emEmail></p>
+        </div>
+        <div class="ButtonEmDiv"></div>
+        <span class="EmpID" data-emID>ID4</span>
+      </div>
+    </div>
+  </template>
+  <!--Inside is row of task for read employee-->
+  <template data-RowTaskReadEmployee>
+    <div class="TaskRow module-TaskRow-employ">
+      <div class="TaskInfo">
+        <p class="tTitle" data-ReadEmTaskTitle>Floor Sweeping</p>
+        <p class="tAsignee" data-ReadEmTaskAsignee>Gosho Petrov</p>
+      </div>
+      <div class="ButtonEmDiv"></div>
+      <span class="StatusOfTask" data-ReadEmTaskStatus>finished</span>
+      <span class="TaskID" data-ReadEmTaskID>ID700</span>
+    </div>
+  </template>
+  <template data-RowStatistics>
+    <div class="RowStatistic">
+      <h2 class="HeadOfStatRow" data-nameStat>All Tasks</h2>
+      <div class="bardiv"><span class="Bar" data-BarStat></span></div>
+      <h2 class="HeadOfStatRow HeadOfStatRowNum" data-StatNum>10</h2>
+    </div>
+  </template>
+</html>
